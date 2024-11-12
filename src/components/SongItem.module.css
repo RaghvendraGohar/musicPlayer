@@ -1,0 +1,6 @@
+.container {
+    padding: 1rem;
+    height: calc(100vh - 4rem); /* Adjust to make it scrollable */
+    overflow-y: auto;
+  }
+  

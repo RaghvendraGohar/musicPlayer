@@ -1,0 +1,8 @@
+/* SongList.module.css */
+.container {
+    padding: 1rem;
+    background-color: #f3f4f6; /* bg-gray-100 */
+    height: 100%;
+    overflow-y: auto;
+  }
+  
