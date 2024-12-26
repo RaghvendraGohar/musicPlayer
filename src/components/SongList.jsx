@@ -10,7 +10,7 @@ function SongList({ songs, onDragStart }) {
           key={song.id} 
           song={song} 
           index={index + 1} 
-          onDragStart={() => onDragStart(song)}  // Pass song to drag handler
+          onDragStart={() => onDragStart(song)} 
         />
       ))}
     </div>

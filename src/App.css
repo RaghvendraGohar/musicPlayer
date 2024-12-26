@@ -1,4 +1,3 @@
-/* General App Container */
 .appContainer {
   display: flex;
   height: 100vh;
@@ -7,7 +6,6 @@
   overflow: hidden;
 }
 
-/* Sidebar Styling */
 .sidebar {
   width: 16rem;
   background: linear-gradient(145deg, #2a2a40, #1e1e2e);
@@ -15,7 +13,6 @@
   z-index: 10;
 }
 
-/* Main Content Area */
 .mainContent {
   flex: 1;
   display: flex;
@@ -23,7 +20,6 @@
   background: linear-gradient(145deg, #23232e, #1e1e2f);
 }
 
-/* Navbar Styling */
 .navbar {
   height: 4rem;
   background: linear-gradient(135deg, #2e2e3e, #242435);
@@ -31,7 +27,6 @@
   z-index: 5;
 }
 
-/* Song List Styling */
 .songList {
   flex: 1;
   background: linear-gradient(135deg, #29293b, #20202e);
@@ -41,7 +36,6 @@
   scrollbar-color: #4b5563 transparent;
 }
 
-/* Custom Scrollbar Styling for Song List */
 .songList::-webkit-scrollbar {
   width: 8px;
 }
@@ -51,10 +45,9 @@
   border-radius: 10px;
 }
 
-/* Song Player Styling - Increased width */
 .songPlayer {
   width: 20%;
-  height: 5rem;  /* Increased height to maintain proportion */
+  height: 5rem;  
   background: linear-gradient(135deg, #1e1e2f, #151522);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);

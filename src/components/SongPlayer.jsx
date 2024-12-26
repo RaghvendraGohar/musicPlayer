@@ -5,7 +5,6 @@ function SongPlayer({ currentSong, onDropSong }) {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    // If there’s a new song, play it automatically
     if (currentSong && audioRef.current) {
       audioRef.current.src = currentSong.path;
       audioRef.current.play();
@@ -15,11 +14,11 @@ function SongPlayer({ currentSong, onDropSong }) {
   const handleDrop = (event) => {
     event.preventDefault();
     const song = JSON.parse(event.dataTransfer.getData("song"));
-    onDropSong(song);  // Set the dropped song in the App component
+    onDropSong(song);  
   };
 
   const handleDragOver = (event) => {
-    event.preventDefault(); // Prevent default to allow drop
+    event.preventDefault(); 
   };
 
   return (
