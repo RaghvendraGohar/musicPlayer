@@ -1,6 +1,40 @@
-.container {
-    padding: 1rem;
-    height: calc(100vh - 4rem); /* Adjust to make it scrollable */
-    overflow-y: auto;
-  }
-  
+.songItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  cursor: grab;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.songItem:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.index {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00d1ff;
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.songItem:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}

@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import SongList from './components/SongList';
 import SongPlayer from './components/SongPlayer';
+import './App.css'; // Standard CSS import
 
 function App() {
   const [songs] = useState([
@@ -14,25 +15,33 @@ function App() {
   const [currentSong, setCurrentSong] = useState(null);
 
   const handleDropSong = (song) => {
-    setCurrentSong(song);  // Set the dropped song as the current song to play
+    setCurrentSong(song); // Set the dropped song as the current song to play
   };
 
   return (
-    <div style={{ display: 'flex', height: '100vh' }}>
-      <Sidebar />
-      <div style={{ flex: 1 }}>
-        <Navbar />
-        <SongList 
-          songs={songs} 
-          onDragStart={(song) => {
-            // Setting data for drag event
-            document.ondragstart = (event) => {
-              event.dataTransfer.setData("song", JSON.stringify(song));
-            };
-          }} 
-        />
+    <div className="appContainer">
+      <div className="sidebar">
+        <Sidebar />
       </div>
-      <SongPlayer currentSong={currentSong} onDropSong={handleDropSong} />
+      <div className="mainContent">
+        <div className="navbar">
+          <Navbar />
+        </div>
+        <div className="songList">
+          <SongList
+            songs={songs}
+            onDragStart={(song) => {
+              // Setting data for drag event
+              document.ondragstart = (event) => {
+                event.dataTransfer.setData("song", JSON.stringify(song));
+              };
+            }}
+          />
+        </div>
+      </div>
+      <div className="songPlayer">
+        <SongPlayer currentSong={currentSong} onDropSong={handleDropSong} />
+      </div>
     </div>
   );
 }
